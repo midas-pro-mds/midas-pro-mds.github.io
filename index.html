@@ -159,11 +159,11 @@
 
       <div class="item">
          <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
-           A Dataset Sample
+           Our Proposed Framework: MiDAS-PRo
            </h2>
          <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
          <p>
-         This Figure shows an example image conveying satire. The irony in the image is that the person is messaging someone a very heartfelt message on the mobile, while sitting on a toilet seat!
+         This Figure shows the MiDAS-PRo Framework for Multi-Document Summarization.
            <br><br>
            <img src="static/images/MiDAS-PRo.jpg"  alt="MY ALT TEXT" style="width: 50%; display: block; margin: auto;"/>
          </p>
@@ -172,11 +172,11 @@
 
       <div class="item">
          <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
-           YesBut Dataset Curation
+           In-Context Example Selection
            </h2>
          <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
          <p>
-          Our annotation Pipeline for YesBut in 4 Stages- (1) Collecting Satirical Images from Social Media (2) Human Annotation of satirical images (3) Generating 2D stick images using DALL-E 3 and annotated descriptions (4) Generating 3D stick images using DALL-E 3 and annotated descriptions
+          Training GAT module for ICE (In-Context Example) Selection
          <br><br>
            <img src="static/images/gat.jpg"  alt="MY ALT TEXT" style="width: 50%; display: block; margin: auto;"/>
          </p>
@@ -185,11 +185,12 @@
 
       <div class="item">
         <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
-          Distribution of the YesBut Dataset
+          1-Shot Results on Multi-XScience Dataset
           </h2>
         <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
         <p>
-          Distribution of the original 283 satirical images downloaded from Social Media based on different aspects of image content and annotated descriptions
+          1-Shot Results of Natural Language LLMs combined with different ICE Selection Methods compared to MiDAS-PRo
+on Multi-XScience. Underlined values correspond to metrics where MiDAS-PRo gives signifcant improvement (p < 0.05)
         <br><br>
           <img src="static/images/1-shot-multixscience.jpg"  alt="MY ALT TEXT" style="display: block; margin: auto;"/>
         </p>
@@ -198,11 +199,11 @@
 
       <div class="item">
          <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
-           Task - Satirical Image Detection
+           1-Shot Results on MiDAS Dataset
            </h2>
          <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
          <p>
-          This is a binary classification task, where given an image, the model needs to predict whether the image is satirical or not.
+           1-Shot In-Context Results of GPT-4o combined with different In-Context Example (ICE) Selection Methods compared to MiDAS-PRo on MiDAS. Results in bold and italic are the best and the second-best results respectively
          <br><br>
            <img src="static/images/Midas-dataset.jpg"  alt="MY ALT TEXT" style="display: block; margin: auto;"/>
          </p>
@@ -213,11 +214,11 @@
 
       <div class="item">
          <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
-           Task - Satirical Image Understanding
+           K-shot Results
            </h2>
          <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
          <p>
-          Given a satirical image, we evaluate the model’s satire understanding capability in images by (1) prompting the model to generate a textual description of each subimage as input, using the prompt “Describe the image”. (2) prompting the model to generate the punchline in the image using the following prompt (referred to as “WHYFUNNY_PROMPT” hereafter)- “Why is this image funny/satirical?”.
+          K-Shot In-Context Results (K = 1, 3, 5, 10) of GPT-4o combined with different ICE Selection Methods compared to MiDAS-PRo on Multi-XScience. MiDAS-PRo gives signifcant improvement (p < 0.05) compared to baselines
          <br><br>
            <img src="static/images/k-shot.jpg"  alt="MY ALT TEXT" style="display: block; margin: auto;"/>
          </p>
@@ -226,11 +227,11 @@
 
       <div class="item">
         <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
-          Task - Satirical Image Completion
+          Ablation Analysis
           </h2>
         <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
         <p>
-          Given either the left or right sub-image having the style of a colorized sketch, the other sub-image needs to be chosen from two options, one having a 2D, and the other having a 3D stick figure style, such that the entire image so formed is meaningful and satirical.
+          Ablation Analysis of MiDAS-PRo when applied on Llama-3-8B-Instruct (GPT-4o is used for generating the code).
         <br><br>
           <img src="static/images/Ablation.jpg"  alt="MY ALT TEXT" style="display: block; margin: auto;"/>
         </p>
@@ -239,10 +240,10 @@
 
      <div class="item">
       <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
-        Results
+        MiDAS-PRo Vs. Baselines
         </h2>
       <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
-      <p>
+      <p>Comparison of MiDAS-PRo (with GPT-4o back-bone) with other Multi-Doc Summarization Baselines. <br><br>
        
         <img src="static/images/Baselines.jpg"  alt="MY ALT TEXT" style="display: block; margin: auto;"/>
       </p>
@@ -251,10 +252,11 @@
 
      <div class="item">
       <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
-        Results
+        Human Evaluation
         </h2>
       <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
       <p>
+        Human Evaluation of MiDAS-PRo
        
         <img src="static/images/Human-eval.jpg"  alt="MY ALT TEXT" style="display: block; margin: auto;"/>
       </p>
@@ -354,7 +356,7 @@
     <div class="container">
       <h2 class="title">Poster</h2>
 
-      <iframe  src="https://drive.google.com/file/d/1EQqgwbcS7xkVx38y0qPvdRh0gQyeOH5u/preview" width="100%" height="450">
+      <iframe  src="https://drive.google.com/file/d/1EQqgwbcS7xkVx38y0qPvdRh0gQyeOH5u/preview" width="100%" height="550">
           </iframe>
         
       </div>
