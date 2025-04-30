@@ -140,7 +140,7 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Document summarization has greatly benefited from advances in large language models (LLMs). In real-world situations, summaries often need to be generated from multiple documents with diverse sources and authors, lacking a clear information flow. Naively concatenating these documents and generating a summary can lead to poorly structured narratives and redundancy. Additionally, attributing each part of the generated summary to a specific source is crucial for reliability. In this study, we address multi-document summarization with attribution using our proposed solution ✨ <span style="color: #FFD700;"><b><i>MiDAS</i></b></span>-<span style="color: #FFC0CB;"><b><i>PRo</i></b></span> ✨,consisting of three stages: (i) Planning the hierarchical organization of source documents, (ii) Reasoning by generating relevant entities/topics, and (iii) Summary Generation. We treat the first two sub-problems as a code completion task for LLMs. By incorporating well-selected in-context learning examples through a graph attention network, LLMs effectively generate plans and reason topics for a document collection. Experiments on summarizing scientific articles from public datasets show that our approach outperforms state-of-the-art baselines in both automated and human evaluations.
+              Document summarization has greatly benefited from advances in large language models (LLMs). In real-world situations, summaries often need to be generated from multiple documents with diverse sources and authors, lacking a clear information flow. Naively concatenating these documents and generating a summary can lead to poorly structured narratives and redundancy. Additionally, attributing each part of the generated summary to a specific source is crucial for reliability. In this study, we address multi-document summarization with attribution using our proposed solution ✨ <span style="color: #FFD700;"><b><i>MiDAS</i></b></span>-<span style="color: #FFC0CB;"><b><i>PRo</i></b></span> ✨ (Multi-Document Attribution-inclusive Summarization via Planning-cum-Reasoning) consisting of three stages: (i) Planning the hierarchical organization of source documents, (ii) Reasoning by generating relevant entities/topics, and (iii) Summary Generation. We treat the first two sub-problems as a code completion task for LLMs. By incorporating well-selected in-context learning examples through a graph attention network, LLMs effectively generate plans and reason topics for a document collection. Experiments on summarizing scientific articles from public datasets show that our approach outperforms state-of-the-art baselines in both automated and human evaluations.
             </p>
           </div>
         </div>
@@ -165,7 +165,7 @@
          <p>
          This Figure shows an example image conveying satire. The irony in the image is that the person is messaging someone a very heartfelt message on the mobile, while sitting on a toilet seat!
            <br><br>
-           <img src="static/images/20240101_174025.jpg"  alt="MY ALT TEXT" style="width: 50%; display: block; margin: auto;"/>
+           <img src="static/images/MiDAS-PRo.jpg"  alt="MY ALT TEXT" style="width: 50%; display: block; margin: auto;"/>
          </p>
          </h3>
       </div>
@@ -178,7 +178,7 @@
          <p>
           Our annotation Pipeline for YesBut in 4 Stages- (1) Collecting Satirical Images from Social Media (2) Human Annotation of satirical images (3) Generating 2D stick images using DALL-E 3 and annotated descriptions (4) Generating 3D stick images using DALL-E 3 and annotated descriptions
          <br><br>
-           <img src="static/images/img3.png"  alt="MY ALT TEXT" style="width: 50%; display: block; margin: auto;"/>
+           <img src="static/images/gat.jpg"  alt="MY ALT TEXT" style="width: 50%; display: block; margin: auto;"/>
          </p>
          </h3>
       </div>
@@ -191,7 +191,7 @@
         <p>
           Distribution of the original 283 satirical images downloaded from Social Media based on different aspects of image content and annotated descriptions
         <br><br>
-          <img src="static/images/YesBut_Distro.png"  alt="MY ALT TEXT" style="display: block; margin: auto;"/>
+          <img src="static/images/1-shot-multixscience.jpg"  alt="MY ALT TEXT" style="display: block; margin: auto;"/>
         </p>
         </h3>
      </div>
@@ -204,7 +204,7 @@
          <p>
           This is a binary classification task, where given an image, the model needs to predict whether the image is satirical or not.
          <br><br>
-           <img src="static/images/satire_det_task.png"  alt="MY ALT TEXT" style="display: block; margin: auto;"/>
+           <img src="static/images/Midas-dataset.jpg"  alt="MY ALT TEXT" style="display: block; margin: auto;"/>
          </p>
          </h3>
       </div>
@@ -219,7 +219,7 @@
          <p>
           Given a satirical image, we evaluate the model’s satire understanding capability in images by (1) prompting the model to generate a textual description of each subimage as input, using the prompt “Describe the image”. (2) prompting the model to generate the punchline in the image using the following prompt (referred to as “WHYFUNNY_PROMPT” hereafter)- “Why is this image funny/satirical?”.
          <br><br>
-           <img src="static/images/satire_und_task.png"  alt="MY ALT TEXT" style="display: block; margin: auto;"/>
+           <img src="static/images/k-shot.jpg"  alt="MY ALT TEXT" style="display: block; margin: auto;"/>
          </p>
          </h3>
       </div>
@@ -232,7 +232,7 @@
         <p>
           Given either the left or right sub-image having the style of a colorized sketch, the other sub-image needs to be chosen from two options, one having a 2D, and the other having a 3D stick figure style, such that the entire image so formed is meaningful and satirical.
         <br><br>
-          <img src="static/images/satire_comp_task.png"  alt="MY ALT TEXT" style="display: block; margin: auto;"/>
+          <img src="static/images/Ablation.jpg"  alt="MY ALT TEXT" style="display: block; margin: auto;"/>
         </p>
         </h3>
      </div>      
@@ -244,10 +244,22 @@
       <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
       <p>
        
-        <img src="static/images/YesBut_Results.jpg"  alt="MY ALT TEXT" style="display: block; margin: auto;"/>
+        <img src="static/images/Baselines.jpg"  alt="MY ALT TEXT" style="display: block; margin: auto;"/>
       </p>
       </h3>
    </div>           
+
+     <div class="item">
+      <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">
+        Results
+        </h2>
+      <h3 class="subtitle is-size-4-tablet has-text-left pr-4 pl-4 pt-3 pb-3">
+      <p>
+       
+        <img src="static/images/Human-eval.jpg"  alt="MY ALT TEXT" style="display: block; margin: auto;"/>
+      </p>
+      </h3>
+   </div>          
 
 <!--      <div class="item">-->
 <!--         <h2 class="subtitle is-size-3-tablet has-text-weight-bold has-text-centered has-background-info-light mr-0 pt-3 pb-3">-->
@@ -303,7 +315,7 @@
 
 
 
-<!-- Youtube video -->
+<!-- Youtube Shorts video -->
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
@@ -313,15 +325,15 @@
         <div class="column is-four-fifths">
           
           <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/S7zJis8rEbw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <!-- Youtube Shorts embed code -->
+            <iframe src="https://www.youtube.com/embed/6ecxLLUpWJE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
+<!-- End Youtube Shorts video -->
 
 
 
